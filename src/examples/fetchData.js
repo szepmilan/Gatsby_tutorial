@@ -1,8 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-const ComponentName = () => {
-  const data = useStaticQuery(graphql`
+const getData = graphql`
     {
       site {
         siteMetadata {
@@ -21,17 +20,26 @@ const ComponentName = () => {
         }
       }
     }
-  `)
-  return <div>
-    <h2>{data.site.siteMetadata.person.name}</h2>
+`
+
+const FetchData = () => {
+  const {
+    site: {
+      siteMetadata: {title},
+    },
+  } = useStaticQuery(getData);
+  return (
     <div>
-      {data.site.siteMetadata.complexData.map((item,index)=>{
+      {/*<h2>Name: {data.site.siteMetadata.person.name}</h2>*/
+      <h2>site title is: {title}</h2>
+      }
+      {/*data.site.siteMetadata.complexData.map((item,index)=>{
         return <p key={index}>
           {item.name}:{item.age}
         </p>
-      })}
+      })*/}
     </div>
-  </div>
+  )
 }
 
-export default ComponentName
+export default FetchData
