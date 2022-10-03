@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
-import FetchData from '../examples/fetchData'
+//import FetchData from '../examples/fetchData'
 //import SEO from "../components/SEO"
 
 export default function Home() {
@@ -24,7 +24,6 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <FetchData/>
       </main>
     </Layout>
   )
