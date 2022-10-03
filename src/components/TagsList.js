@@ -9,14 +9,16 @@ const TagsList = ({recipes}) => {
   return (
     <div className='tag-container'>
       <h4>recipes</h4>
-      {newTags.map((tag,index)=>{
-        const [text,value] = tag
-        return (
-          <Link to={`/${text}`} key={index}>
+      <div className='tags-list'>
+        {newTags.map((tag,index)=>{
+          const [text,value] = tag
+          return (
+            <Link to={`/${text}`} key={index}>
             {text} ({value})
-          </Link>
-        )
-      })}
+            </Link>
+          )
+        })}
+      </div>
     </div>
   )
 }
