@@ -1,11 +1,23 @@
 import React from 'react'
 import setupTags from '../utils/setupTags';
+import {Link} from "gatsby"
 
 const TagsList = ({recipes}) => {
   console.log(recipes);
   const newTags = setupTags(recipes);
+  //console.log(newTags);
   return (
-    <div>this is taglist</div>
+    <div className='tag-container'>
+      <h4>recipes</h4>
+      {newTags.map((tag,index)=>{
+        const [text,value] = tag
+        return (
+          <Link to={`/${text}`} key={index}>
+            {text} ({value})
+          </Link>
+        )
+      })}
+    </div>
   )
 }
 
