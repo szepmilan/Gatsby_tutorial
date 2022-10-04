@@ -1,6 +1,7 @@
 import React from 'react'
 
-const TagTemplate = () => {
+const TagTemplate = props => {
+  console.log(props);
   return (
     <div>
       <h2>tag template page</h2>
