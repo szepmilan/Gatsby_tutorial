@@ -16,7 +16,11 @@ const Contact = ({data}) => {
             <p>Sriracha kickstarter ascot occupy you probably haven't heard of them gastropub bitters artisan leggings glossier semiotics jean shorts selvage neutra.</p>
           </article>
           <article>
-            <form className='form contact-form'>
+            <form 
+              className='form contact-form'
+              action="https://formspree.io/f/xqkjbgrb"
+              method="POST"
+            >
               <div className='form-row'>
                 <label htmlFor='name'>your name</label>
                 <input type="text" name="name" id="name"></input>
